@@ -13,7 +13,7 @@ modebutton.addEventListener("click",()=>{
     card.classList.toggle("light-mode");
 })
 searchButton.addEventListener("click",(e)=>{
-    let countryName:string=searchInput.value.toLocaleUpperCase();
+    let countryName:string=searchInput.value.toLocaleUpperCase().trim();
     const url:string=`https://restcountries.com/v3.1/name/${countryName}?fullText=true`;
         fetch(url).then((data)=>{
             if (data.status !== 404) {

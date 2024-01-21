@@ -12,7 +12,7 @@ modebutton.addEventListener("click", function () {
     card.classList.toggle("light-mode");
 });
 searchButton.addEventListener("click", function (e) {
-    var countryName = searchInput.value.toLocaleUpperCase();
+    var countryName = searchInput.value.toLocaleUpperCase().trim();
     var url = "https://restcountries.com/v3.1/name/".concat(countryName, "?fullText=true");
     fetch(url).then(function (data) {
         if (data.status !== 404) {
