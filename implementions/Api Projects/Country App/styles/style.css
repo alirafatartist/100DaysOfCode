@@ -133,4 +133,30 @@ body .container.light-mode .bottom .details .material-symbols-outlined {
 }
 body .container.light-mode .bottom .details span {
   color: #292929;
+}
+
+@media screen and (max-width: 541px) {
+  body .container {
+    padding: 20px;
+  }
+  body .container .darkmode-icon {
+    top: 5px;
+    right: 3px;
+    font-size: 20px;
+  }
+  body .container .top button {
+    padding: 5px;
+  }
+  body .container input {
+    width: 100px;
+  }
+  body .container .bottom .country .pic img {
+    height: 100px;
+  }
+  body .container .bottom .details h5 {
+    font-size: 13px;
+  }
+  body .container .bottom .details h5:nth-child(5) {
+    width: 200px;
+  }
 }/*# sourceMappingURL=style.css.map */

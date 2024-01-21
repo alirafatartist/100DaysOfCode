@@ -142,3 +142,43 @@ body{
         }
     }
 }
+@media screen and (max-width: 541px) {
+    body {
+    //   h1 {
+    //     font-size: 25px;
+    //   }
+      .container {
+        padding: 20px;
+        .darkmode-icon{
+            top: 5px;
+            right: 3px;
+            font-size: 20px;
+        }
+        .top{
+            button{
+                padding: 5px;
+            }
+        }
+        input{
+            width: 100px;
+        }
+        .bottom{
+            .country{
+                .pic{
+                    img{
+                        height: 100px;
+                    }
+                }
+            }
+            .details{
+                h5{
+                    font-size: 13px;
+                }
+                h5:nth-child(5){
+                    width: 200px;
+                }
+            }
+        }
+      }
+    }
+  }
