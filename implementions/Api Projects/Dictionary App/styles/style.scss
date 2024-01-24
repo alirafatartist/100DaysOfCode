@@ -1,0 +1,204 @@
+$main-dark: #121212;
+$card-dark: #292929;
+$input-dark: #bababa;
+$main-light: #3164ff;
+$card-light: #fff;
+$input-light: $card-light;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s linear;
+}
+::selection {
+  background: yellow;
+  color: #3164ff;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: $main-dark;
+  h1{
+    margin-bottom: 20px;
+    color: $card-light;
+  }
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: $card-dark;
+    border-radius: 10px;
+    padding: 40px;
+    color: $card-light;
+    .darkmode-icon {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      color: rgb(255, 174, 0);
+      cursor: pointer;
+    }
+    .top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      input {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid $main-light;
+        background: $card-dark;
+        color: $card-light;
+        padding-bottom: 5px;
+        text-transform: capitalize;
+      }
+      button {
+        border: none;
+        outline: none;
+        background: $main-light;
+        color: $card-light;
+        padding: 10px;
+        border-radius: 6px;
+        margin-left: 30px;
+        cursor: pointer;
+      }
+    }
+    .bottom {
+      margin-top: 60px;
+      display: flex;
+      justify-content: s;
+      align-items: center;
+      flex-direction: column;
+      .word {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .wordinfo {
+          h6 {
+            font-size: 30px;
+          }
+          p {
+            color: $input-dark;
+          }
+        }
+        .volume {
+          border: none;
+          background: none;
+          color: $main-light;
+          cursor: pointer;
+        }
+      }
+      .extra {
+        margin-top: 30px;
+        .syn {
+          font-size: 14px;
+          border-left: 5px solid rgb(2, 255, 23);
+          padding-inline: 10px;
+          p {
+            color: $input-dark;
+            font-size: 10px;
+          }
+        }
+        .def {
+          font-size: 14px;
+          margin-top: 20px;
+          border-left: 5px solid rgb(12, 201, 201);
+          padding-inline: 10px;
+          width: 400px;
+          p {
+            color: $input-dark;
+            font-size: 10px;
+          }
+        }
+        .example {
+          font-size: 14px;
+          margin-top: 20px;
+          border-left: 5px solid rgb(194, 0, 253);
+          padding-inline: 10px;
+          p {
+            color: $input-dark;
+            font-size: 10px;
+          }
+        }
+      }
+      .error {
+        color: #ff4362;
+      }
+    }
+  }
+  &.light-mode {
+    background: $main-light;
+  }
+
+  .container.light-mode {
+    background: $card-light;
+    color: #000;
+    .darkmode-icon {
+      transform: rotate(257deg);
+      color: #121212;
+    }
+    input {
+      background: $input-light;
+      border: 1px solid #c2c1c1;
+      color: #000;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid $main-light;
+    }
+  }
+}
+@media screen and (max-width: 541px) {
+  body {
+    .container {
+      padding: 20px;
+      .darkmode-icon {
+        top: 5px;
+        right: 3px;
+        font-size: 20px;
+      }
+      .top {
+        button {
+          padding: 5px;
+        }
+      }
+      input {
+        width: 100px;
+      }
+      .bottom {
+        margin-top: 60px;
+        display: flex;
+        justify-content: s;
+        align-items: center;
+        flex-direction: column;
+        .word {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .wordinfo {
+            h6 {
+              font-size: 20px;
+            }
+            
+          }
+          
+        }
+        .extra{
+          .syn,.def,.example{
+            font-size: 10px;
+            p{
+              font-size: 7px;
+            }
+          }
+          .syn,.def,.example{
+            max-width: 280px;
+          }
+        }
+        
+      }
+    }
+  }
+}

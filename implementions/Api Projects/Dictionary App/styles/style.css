@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s linear;
+}
+
+::-moz-selection {
+  background: yellow;
+  color: #3164ff;
+}
+
+::selection {
+  background: yellow;
+  color: #3164ff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #121212;
+}
+body h1 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+body .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #292929;
+  border-radius: 10px;
+  padding: 40px;
+  color: #fff;
+}
+body .container .darkmode-icon {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: rgb(255, 174, 0);
+  cursor: pointer;
+}
+body .container .top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container .top input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #3164ff;
+  background: #292929;
+  color: #fff;
+  padding-bottom: 5px;
+  text-transform: capitalize;
+}
+body .container .top button {
+  border: none;
+  outline: none;
+  background: #3164ff;
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+body .container .bottom {
+  margin-top: 60px;
+  display: flex;
+  justify-content: s;
+  align-items: center;
+  flex-direction: column;
+}
+body .container .bottom .word {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .container .bottom .word .wordinfo h6 {
+  font-size: 30px;
+}
+body .container .bottom .word .wordinfo p {
+  color: #bababa;
+}
+body .container .bottom .word .volume {
+  border: none;
+  background: none;
+  color: #3164ff;
+  cursor: pointer;
+}
+body .container .bottom .extra {
+  margin-top: 30px;
+}
+body .container .bottom .extra .syn {
+  font-size: 14px;
+  border-left: 5px solid rgb(2, 255, 23);
+  padding-inline: 10px;
+}
+body .container .bottom .extra .syn p {
+  color: #bababa;
+  font-size: 10px;
+}
+body .container .bottom .extra .def {
+  font-size: 14px;
+  margin-top: 20px;
+  border-left: 5px solid rgb(12, 201, 201);
+  padding-inline: 10px;
+  width: 400px;
+}
+body .container .bottom .extra .def p {
+  color: #bababa;
+  font-size: 10px;
+}
+body .container .bottom .extra .example {
+  font-size: 14px;
+  margin-top: 20px;
+  border-left: 5px solid rgb(194, 0, 253);
+  padding-inline: 10px;
+}
+body .container .bottom .extra .example p {
+  color: #bababa;
+  font-size: 10px;
+}
+body .container .bottom .error {
+  color: #ff4362;
+}
+body.light-mode {
+  background: #3164ff;
+}
+body .container.light-mode {
+  background: #fff;
+  color: #000;
+}
+body .container.light-mode .darkmode-icon {
+  transform: rotate(257deg);
+  color: #121212;
+}
+body .container.light-mode input {
+  background: #fff;
+  border: 1px solid #c2c1c1;
+  color: #000;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #3164ff;
+}
+
+@media screen and (max-width: 541px) {
+  body .container {
+    padding: 20px;
+  }
+  body .container .darkmode-icon {
+    top: 5px;
+    right: 3px;
+    font-size: 20px;
+  }
+  body .container .top button {
+    padding: 5px;
+  }
+  body .container input {
+    width: 100px;
+  }
+  body .container .bottom {
+    margin-top: 60px;
+    display: flex;
+    justify-content: s;
+    align-items: center;
+    flex-direction: column;
+  }
+  body .container .bottom .word {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body .container .bottom .word .wordinfo h6 {
+    font-size: 20px;
+  }
+  body .container .bottom .extra .syn, body .container .bottom .extra .def, body .container .bottom .extra .example {
+    font-size: 10px;
+  }
+  body .container .bottom .extra .syn p, body .container .bottom .extra .def p, body .container .bottom .extra .example p {
+    font-size: 7px;
+  }
+  body .container .bottom .extra .syn, body .container .bottom .extra .def, body .container .bottom .extra .example {
+    max-width: 280px;
+  }
+}/*# sourceMappingURL=style.css.map */
