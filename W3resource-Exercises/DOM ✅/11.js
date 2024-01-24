@@ -17,5 +17,10 @@ let theImages = [
 ];
 
 function display_random_image() {
-  console.log(Math.ceil(Math.random() * theImages.length));
+  let div = document.querySelector("div.img");
+  let ransomNum = Math.floor(Math.random() * theImages.length);
+  console.log(ransomNum);
+  div.innerHTML = `
+  <img src="${theImages[ransomNum].src}" width="${theImages[ransomNum].width}" height="${theImages[ransomNum].height}" alt="">
+  `;
 }
