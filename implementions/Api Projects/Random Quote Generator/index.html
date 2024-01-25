@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/512/11656/11656156.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./src/output.css" />
+    <!-- icon library from google fonts-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Random Quote Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <span class="material-symbols-outlined darkmode-icon" id="button">
+        dark_mode
+      </span>
+      <h1 class="font-bold text-center">Random Quote Generator</h1>
+      <div class="result">
+        <div class="qout w-[22rem]">
+          <i class="fa-solid fa-quote-left text-4xl"></i>
+          <p class="qoute my-2">People under pressure don’t work better; they just work faster.</p>
+          <i
+            class="fa-solid fa-quote-right text-4xl text-right float-right"
+          ></i>
+        </div>
+        <div class="info mt-5 pb-7 border-b-2 border-green-500 flex justify-between items-center">
+          <div class="tags">
+            <p class="text-[#999] text-sm">Tags</p>
+            <div class="tag bg-indigo-600 w-fit p-1 rounded-md text-xs mt-1">Programming</div>
+          </div>
+          <div class="auther">
+            - Tom DeMarco -
+          </div>
+          
+        </div>
+      </div>
+      <div class="funcs">
+        <div class="copy">
+          <span class="material-symbols-outlined"> content_copy </span>
+          <p class="message ml-2 hidden">Copied</p>
+        </div>
+        <div class="gen">
+          <button>
+            New Qoute <span class="material-symbols-outlined"> sync </span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="main.js"></script>
+  </body>
+</html>

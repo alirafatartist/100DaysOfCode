@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+* {
+  @apply box-border transition-all duration-[0.3s] ease-linear m-0 p-0;
+  font-family: "Poppins", sans-serif;
+}
+::-moz-selection {
+  @apply text-[#3164ff];
+  background: yellow;
+}
+::selection {
+  @apply text-[#3164ff];
+  background: yellow;
+}
+@layer components {
+  body {
+    @apply flex flex-col justify-center items-center h-screen;
+    background: #121212;
+  }
+
+  body h1 {
+    @apply text-white mb-5 text-2xl;
+  }
+
+  body .container {
+    @apply relative flex flex-col text-white p-10 rounded-[10px] w-fit pb-7;
+    background: #292929;
+  }
+  body .container .darkmode-icon {
+    @apply absolute text-[rgb(255,174,0)] cursor-pointer right-[15px] top-2.5;
+  }
+  body .container  .funcs {
+    @apply flex justify-between items-center mt-6;
+  }
+  body .container  .funcs .copy,
+  .gen button {
+    @apply flex justify-between items-center;
+  }
+  body .container  .copy .material-symbols-outlined,
+  .gen {
+    @apply flex justify-center items-center px-5 py-2 bg-[#3164ff] cursor-pointer rounded-md hover:bg-blue-500;
+  }
+  body .container .result .qout {
+    @apply mb-14
+  }
+  body .container .copy span,
+  .gen span {
+    @apply text-xl;
+  }
+  body.light-mode {
+    background: #3164ff;
+  }
+  body .container.light-mode {
+    @apply text-black;
+    background: #fff;
+  }
+  body .container.light-mode .tag,.funcs .copy span,.funcs .gen button {
+    @apply text-white;
+  }
+  body .container.light-mode .darkmode-icon {
+    @apply rotate-[257deg] text-[#121212];
+  }
+  body .container.light-mode h1 {
+    @apply text-black;
+  }
+
+  .rotate{
+    @apply rotate-180
+  }
+  @media screen and (max-width: 541px) {
+    body .container {
+      @apply p-5;
+    }
+    body .container .darkmode-icon {
+      @apply text-xl right-[3px] top-[5px];
+    }
+    body .container h1 {
+      @apply text-lg
+    }
+    body .container .result .qout {
+      @apply text-sm w-[18rem]
+    }
+  }
+}
