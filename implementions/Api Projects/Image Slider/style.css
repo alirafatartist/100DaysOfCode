@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0077ff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #6fb2ff;
+  border-radius: 20px;
+}
+body .container .image-con {
+  overflow: hidden;
+}
+body .container .material-symbols-outlined {
+  color: #fff;
+  margin: 10px;
+  background: #ff5722;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 100;
+}
+body .container .slider {
+  height: 400px;
+  width: 570px;
+  display: flex;
+  transition: 1s ease-in-out;
+}
+body .container .slider img {
+  -o-object-fit: fill;
+     object-fit: fill;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  padding: 10px;
+  transition: 0.4s ease-in-out;
+}
+
+@media screen and (max-width: 541px) {
+  .container {
+    transform: rotate(450deg) scale(0.8);
+  }
+}/*# sourceMappingURL=style.css.map */
