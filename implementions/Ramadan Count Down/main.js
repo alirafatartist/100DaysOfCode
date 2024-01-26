@@ -33,7 +33,7 @@ let ramadan_m = ramadan_s / 60;
 let ramadan_h = ramadan_m / 60;
 let ramadan_d = ramadan_h / 24;
 let ramadan_y = ramadan_d / 365;
-span.innerHTML = Math.ceil(ramadan_d);
+span.innerHTML = Math.floor(ramadan_d);
 
 // setInterval(() => {
 //     for(let i=1; i<=3; i++){
