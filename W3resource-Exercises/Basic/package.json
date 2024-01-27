@@ -1,0 +1,11 @@
+{
+  "name": "basic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node 2.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
