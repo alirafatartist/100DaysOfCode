@@ -3,12 +3,15 @@ let homeSec = document.querySelector(".home");
 let aboutSec = document.querySelector(".about");
 let servicesSec = document.querySelector(".services");
 let contactsSec = document.querySelector(".contact");
+let nav = document.querySelector(".nav");
+let menu = document.querySelector(".menu");
 let body = document.querySelector("body");
 darkButton.addEventListener("click", () => {
   homeSec.classList.toggle("light");
   aboutSec.classList.toggle("light");
   servicesSec.classList.toggle("light");
   contactsSec.classList.toggle("light");
+  darkButton.classList.toggle("light");
   body.classList.toggle("light");
 });
 
@@ -74,3 +77,8 @@ button.onclick = () => {
   check_Password_input();
   check_Password2_input();
 };
+
+menu.addEventListener("click", (e) => {
+  menu.classList.toggle("visible")
+  nav.classList.toggle("visible");
+});

@@ -62,20 +62,35 @@ body {
       justify-content: center;
       align-items: center;
     }
+    span.menu {
+      color: #fff;
+      font-size: 28px;
+      cursor: pointer;
+      display: none;
+    }
+    button {
+      padding-inline: 20px;
+      outline: none;
+      border: none;
+      background: none;
+      color: #fff;
+      cursor: pointer;
+      &.light span{
+        color: #fffb00;
+        transform: rotate(268deg);
+      }
+    }
     li {
       padding: 10px;
+      &:hover a {
+        color: $main-light;
+        border-bottom: 1px solid $main-light;
+      }
       a {
         color: #fff;
         text-decoration: none;
       }
-      button {
-        padding-inline: 20px;
-        outline: none;
-        border: none;
-        background: none;
-        color: #fff;
-        cursor: pointer;
-      }
+      
       &:nth-child(1) {
         a {
           color: $main-light;
@@ -454,4 +469,70 @@ body {
 }
 body.light {
   background: #fff;
+}
+
+@media (max-width: 628px) {
+  .nav {
+    // overflow: visible;
+    z-index: 100;
+    .links {
+      ul {
+        right: 0;
+        top: 70px;
+        position: absolute;
+        background: $main-light;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        li:nth-child(1) {
+          a {
+            color: #fff;
+          }
+        }
+        li {
+          &:hover a {
+            color: #fff;
+            border-bottom: 1px solid #fff;
+          }
+        }
+      }
+      span.menu {
+        display: block;
+      }
+    }
+    &.visible {
+      overflow: visible;
+    }
+    .visible {
+      transform: rotate(180deg);
+      // color: $main-light;
+    }
+  }
+  .about {
+    flex-direction: column;
+  }
+  .services {
+    .title {
+      font-size: 20px;
+    }
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 15px;
+      padding-inline: 20px;
+      .card {
+        // height: 150px;
+        font-size: 10px;
+        // overflow: hidden;
+        text-wrap: balance;
+        .info {
+          max-width: 200px;
+        }
+      }
+    }
+  }
+  
 }
