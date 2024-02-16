@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  transition: 0.4s all;
+}
+
+body {
+  background: #242431;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+body .container {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 10px;
+  gap: 3rem;
+}
+body .container .up {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+body .container .up .settings {
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 30px;
+  color: #4b5efc;
+  -webkit-tap-highlight-color: transparent;
+}
+body .container .up .input,
+body .container .up .result {
+  text-align: right;
+  width: 246.5px;
+  overflow: auto;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+body .container .up .input {
+  color: #b5b4b6;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+body .container .up .result {
+  font-size: 4rem;
+}
+body .container .down .main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 20px;
+}
+body .container .down .main button {
+  outline: none;
+  border: none;
+  font-size: 1.4rem;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+body .container .down .main button.gr {
+  background: #d2d3da;
+}
+body .container .down .main button.operation {
+  background: #4b5efc;
+  color: #fff;
+  font-weight: bold;
+}
+body .container .down .main button:active {
+  transition: none;
+  transform: scale(0.95);
+}
+
+body.dark {
+  background: #fff;
+}
+body.dark .container {
+  background: #242431;
+}
+body.dark .container .up .settings {
+  color: #4b5efc;
+}
+body.dark .container .up .result {
+  color: #fff;
+}
+body.dark .container .down {
+  box-shadow: 0px 1px 10px 0px #fff;
+}
+body.dark .container .down .main button {
+  color: #fff;
+  background: #2e2f38;
+}
+body.dark .container .down .main button.gr {
+  background: #4e505f;
+}
+body.dark .container .down .main button.operation {
+  background: #4b5efc;
+  color: #fff;
+}
+
+.spin {
+  transform: rotate(360deg);
+  color: rgb(255, 140, 0);
+}/*# sourceMappingURL=style.css.map */
