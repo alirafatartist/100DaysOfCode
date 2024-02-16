@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/512/7378/7378257.png"
+      type="image/x-icon"
+    />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="up">
+        <div class="settings">
+          <span class="material-symbols-outlined"> dark_mode </span>
+        </div>
+        <input type="text" class="input" value="" readonly />
+        <input type="text" class="result" value="0" readonly />
+      </div>
+      <div class="down">
+        <div class="main">
+          <button class="gr ac">AC</button>
+          <button class="gr">
+            <span class="material-symbols-outlined backspace"> backspace </span>
+          </button>
+          <button onclick="appindtodisplay('%')" class="gr">%</button>
+          <button onclick="appindtodisplay('÷')" class="operation">÷</button>
+          <button onclick="appindtodisplay('7')">7</button>
+          <button onclick="appindtodisplay('8')">8</button>
+          <button onclick="appindtodisplay('9')">9</button>
+          <button onclick="appindtodisplay('×')" class="operation">×</button>
+          <button onclick="appindtodisplay('4')">4</button>
+          <button onclick="appindtodisplay('5')">5</button>
+          <button onclick="appindtodisplay('6')">6</button>
+          <button onclick="appindtodisplay('-')" class="operation">-</button>
+          <button onclick="appindtodisplay('1')">1</button>
+          <button onclick="appindtodisplay('2')">2</button>
+          <button onclick="appindtodisplay('3')">3</button>
+          <button onclick="appindtodisplay('+')" class="operation">+</button>
+          <button>
+            <span class="material-symbols-outlined"> construction </span>
+          </button>
+          <button onclick="appindtodisplay('.')">.</button>
+          <button onclick="appindtodisplay('0')" class="zero">0</button>
+          <button class="operation" onclick="equal()">=</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
