@@ -35,14 +35,6 @@ let ramadan_d = ramadan_h / 24;
 let ramadan_y = ramadan_d / 365;
 span.innerHTML = Math.floor(ramadan_d);
 
-// setInterval(() => {
-//     for(let i=1; i<=3; i++){
-//         setTimeout(() => {
-//             main.style.backgroundImage=`url(./src/images/${i}.jpg)`
-//         }, 3000);
-//     }
-// }, 4000);
-
 const images = [
   "1.jpg",
   "2.jpg",
@@ -66,14 +58,10 @@ function changeBackgroundImage() {
   const imageUrl = `url(./src/images/${getRandomImage()})`;
 
   // Fade out the current image
-  main.style.opacity = 0;
 
   setTimeout(() => {
     // Set the new image
     main.style.backgroundImage = imageUrl;
-
-    // Fade in the new image
-    main.style.opacity = 1;
   }, 500); // Delay the change for 1 second to match the fade-out transition
 }
 
