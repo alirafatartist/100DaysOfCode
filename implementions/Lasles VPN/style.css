@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  transition: all 0.4s;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 10px 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #0b132a;
+  font-weight: bold;
+  border: 1px solid #f53838;
+  border-radius: 30px;
+  color: #f53838;
+}
+button:hover {
+  background: #f53838;
+  color: #fff;
+}
+
+.rotate {
+  transform: rotate(360deg);
+  color: rgb(255, 145, 0);
+}
+
+html {
+  font-size: 90%;
+  scroll-behavior: smooth;
+}
+html body .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 3.3rem;
+  overflow-x: hidden;
+}
+html body .container .nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 20px;
+  position: sticky;
+  background: #fff;
+  top: 0;
+}
+html body .container .nav .links ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+html body .container .nav .links ul li {
+  margin-right: 40px;
+}
+html body .container .nav .links ul li:nth-child(5) {
+  margin: 0;
+}
+html body .container .nav .links ul li a {
+  color: #4f5665;
+}
+html body .container .nav .links ul li a:hover {
+  color: #f53838;
+}
+html body .container .nav .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+}
+html body .container .nav .buttons button:nth-child(1) {
+  color: #0b132a;
+  border: none;
+}
+html body .container .nav .buttons button:nth-child(1):hover {
+  background: none;
+  color: #0b132a;
+}
+html body .container .nav .menu {
+  display: none;
+}
+html body .container .nav span {
+  cursor: pointer;
+}
+html body .container .nav span.dark {
+  margin-left: 20px;
+}
+html body .container section.home {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+html body .container section.home .heros {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+html body .container section.home .heros .hero-left {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+html body .container section.home .heros .hero-left h1 {
+  font-size: 4rem;
+  margin-bottom: 30px;
+}
+html body .container section.home .heros .hero-left p {
+  color: #4f5665;
+}
+html body .container section.home .heros .hero-left p span {
+  font-weight: bold;
+}
+html body .container section.home .heros .hero-left button {
+  margin-top: 30px;
+  width: 200px;
+  border-radius: 7px;
+  background: #f53838;
+  color: #fff;
+  box-shadow: 0 20px 40px rgba(245, 56, 56, 0.35);
+  border: none;
+}
+html body .container section.home .heros .hero-left button:hover {
+  background: #0b132a;
+  box-shadow: 0 20px 40px rgba(11, 19, 42, 0.35);
+}
+html body .container section.home .heros .hero-right img {
+  width: 40rem;
+}
+html body .container section.home .bottom-hero {
+  margin-top: 30px;
+}
+html body .container section.home .bottom-hero .content {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+  height: 100px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.09);
+}
+html body .container section.home .bottom-hero .content .info {
+  border-right: 2px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 20px;
+  max-width: 40rem;
+}
+html body .container section.home .bottom-hero .content .info:nth-child(3) {
+  border: none;
+}
+html body .container section.home .bottom-hero .content .info .desc {
+  margin-left: 20px;
+}
+html body .container section.features .heros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html body .container section.features .heros .hero-left {
+  margin-right: 60px;
+}
+html body .container section.features .heros .hero-left img {
+  width: 40rem;
+}
+html body .container section.features .heros .hero-right {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+html body .container section.features .heros .hero-right h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+html body .container section.features .heros .hero-right p {
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+html body .container section.features .heros .hero-right .checks .check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+html body .container section.features .heros .hero-right .checks .check p {
+  margin: 0;
+}
+html body .container section.features .heros .hero-right .checks .check img {
+  margin-right: 10px;
+  background: transparent;
+}
+html body .container section.pricing {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+html body .container section.pricing h1,
+html body .container section.pricing p {
+  text-align: center;
+}
+html body .container section.pricing h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+html body .container section.pricing .cards {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+html body .container section.pricing .cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  border: 2px solid rgba(221, 221, 221, 0.631372549);
+  border-radius: 10px;
+  padding: 20px;
+}
+html body .container section.pricing .cards .card:hover {
+  border: 2px solid #f53838;
+}
+html body .container section.pricing .cards .card:hover img.gift {
+  transform: scale(1.07);
+}
+html body .container section.pricing .cards .card .price,
+html body .container section.pricing .cards .card .plan-name {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+html body .container section.pricing .cards .card .infos .info {
+  display: flex;
+  align-items: center;
+}
+html body .container section.network {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+html body .container section.network h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+html body .container section.network p {
+  margin-bottom: 20px;
+}
+
+body.dark {
+  background: #0b132a;
+}
+body.dark .container .nav {
+  background: #0b132a;
+  color: #fff;
+}
+body.dark .container .nav .logo a svg path.logo-path {
+  fill: #fff;
+}
+body.dark .container .nav .buttons button:nth-child(1) {
+  color: #fff;
+}
+body.dark .container section.home {
+  background: #0b132a;
+}
+body.dark .container section.home .heros .hero-left h1 {
+  color: #fff;
+}
+body.dark .container section.home .heros .hero-left button:hover {
+  outline: 1px solid #f53838;
+}
+body.dark .container section.home .bottom-hero {
+  margin-top: 30px;
+}
+body.dark .container section.home .bottom-hero .content {
+  background: #0b132a;
+  color: #fff;
+  height: 100px;
+  box-shadow: 0 20px 60px rgba(230, 230, 230, 0.09);
+}
+body.dark .container section.features {
+  color: #fff;
+}
+body.dark .container section.features .heros .hero-right .checks .check img {
+  box-shadow: 0 0 19px 3px #2fab73;
+  border-radius: 50%;
+}
+body.dark .container section.pricing {
+  color: #fff;
+}
+body.dark .container section.network {
+  color: #fff;
+}
+
+@media (max-width: 1062px) {
+  html {
+    font-size: 80%;
+  }
+  html body .container {
+    overflow-x: hidden;
+  }
+  html body .container .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  html body .container .nav .logo {
+    width: 80px;
+  }
+  html body .container .nav .menu {
+    display: block;
+    font-size: 2.5rem;
+  }
+  html body .container .nav .links {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3333333333);
+    top: 81px;
+    bottom: 0;
+    transform: translateX(100%);
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  html body .container .nav .links ul {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  html body .container .nav .links ul li {
+    margin: 0;
+    padding: 20px;
+  }
+  html body .container .nav .links ul li a {
+    font-size: 1.3rem;
+    color: #fff;
+  }
+  html body .container .nav .links.transform-links {
+    transform: translateX(0);
+  }
+  html body .container .home .heros {
+    flex-direction: column;
+  }
+  html body .container .home .heros .hero-left {
+    margin-bottom: 40px;
+  }
+  html body .container section.features .heros {
+    flex-direction: column;
+  }
+  html body .container section.features .heros .hero-left {
+    margin-right: 0px;
+    margin-bottom: 50px;
+    max-width: 500px;
+  }
+  html body .container section.features .heros .hero-left img {
+    width: 100%;
+  }
+  html body .container section.pricing .cards {
+    grid-template-columns: auto;
+  }
+  html body .container section.pricing .cards .card .plan-name {
+    font-size: 3rem;
+  }
+  html body .container section.pricing .cards .card .info {
+    font-size: 1.5rem;
+  }
+  html body .container section.network img {
+    width: 50em;
+  }
+}
+@media (max-width: 625px) {
+  html {
+    font-size: 60%;
+  }
+  html body .container {
+    overflow-x: hidden;
+  }
+  html body .container .nav .logo svg {
+    width: 100px;
+  }
+  html body .container .nav .buttons button {
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+  html body .container .nav span.dark {
+    margin: 0;
+  }
+  html body .container .nav .links ul li a {
+    font-size: 1.2rem;
+  }
+  html body .container section.home .heros .hero-right img {
+    width: 37rem;
+  }
+  html body .container section.home .heros .hero-left h1 {
+    text-align: center;
+  }
+  html body .container section.home .bottom-hero .content .info {
+    padding-inline: 10px;
+  }
+  html body .container section.home .bottom-hero .content .info img {
+    width: 40px;
+  }
+  html body .container section.features .heros .hero-right {
+    padding: 20px;
+    height: 100%;
+  }
+  html body .container section.network img {
+    width: 35em;
+  }
+}/*# sourceMappingURL=style.css.map */
