@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/styles/style.css" />
+    <title>QR Code Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="https://quickchart.io/qr?text=Type%20url%20or%20enter%20text%20to%20create%20QR%20code"
+        alt="QR Code"
+      />
+      <div class="content">
+        <input type="text" placeholder="Enter Your Text or URL" />
+        <div class="colors">
+          <div class="color">
+            <input type="color" id="main" value="#000000" />
+            <label for="main">Color</label>
+          </div>
+          <div class="background">
+            <input type="color" id="bg" value="#ffffff" />
+            <label for="bg">Background</label>
+          </div>
+        </div>
+      </div>
+      <button>Download</button>
+    </div>
+
+    <!-- scripts -->
+    <script src="./dist/scripts/main.js"></script>
+  </body>
+</html>
