@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  text-transform: capitalize;
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+}
+
+*::-moz-selection {
+  background: #002963;
+  color: #fff;
+}
+
+*::selection {
+  background: #002963;
+  color: #fff;
+}
+
+html {
+  font-size: 62.55%;
+  overflow-x: hidden;
+}
+
+body {
+  background: #333;
+}
+body header {
+  width: 96%;
+  background: #fff;
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  transition: 0.5s;
+}
+body header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+body header nav ul li {
+  margin-inline: 1rem;
+}
+body header nav ul li a {
+  font-size: 2rem;
+  color: #002963;
+  transition: 0.2s;
+}
+body header nav ul li a.active {
+  color: #2680ff;
+}
+body header nav ul li a:hover {
+  color: #2680ff;
+}
+body header .logo {
+  color: #2680ff;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+body header .logo i {
+  color: #002963;
+  padding-inline: 0.2rem;
+}
+body header .fa-bars {
+  font-size: 3rem;
+  color: #002963;
+  cursor: pointer;
+  display: none;
+  transition: 0.5s;
+}
+body .home {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(38, 128, 255, 0.6039215686), rgba(0, 41, 99, 0.8392156863)), url(/assets/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+}
+body .home .content {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 14rem;
+  padding-bottom: 5rem;
+  text-align: center;
+  color: #fff;
+}
+body .home .content h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  padding-inline: 1rem;
+  text-shadow: 1px 3px 3px black;
+}
+body .home .content p {
+  font-size: 2rem;
+  padding: 1rem 25rem;
+}
+body .home .content button {
+  height: 4rem;
+  width: 20rem;
+  border-radius: 0.7rem;
+  background: #002963;
+  border: none;
+  color: #fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+body .home .content button:hover {
+  background: #2680ff;
+}
+body .home .box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 2rem;
+}
+body .home .box-container .box {
+  height: 20rem;
+  width: 25rem;
+  padding: 2rem;
+  background: #fff;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.7rem;
+  gap: 1rem;
+  cursor: pointer;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+body .home .box-container .box .fa-solid {
+  width: 6rem;
+  height: 6rem;
+  line-height: 6rem;
+  text-align: center;
+  font-size: 3rem;
+  border-radius: 50%;
+  background: #2680ff;
+  color: #fff;
+  margin-top: 2rem;
+  transition: 0.4s;
+}
+body .home .box-container .box h3 {
+  font-size: 2rem;
+  color: #2680ff;
+}
+body .home .box-container .box p {
+  font-size: 1.3rem;
+  padding: 0.7rem 2rem;
+  color: #666;
+  text-align: center;
+}
+body .home .box-container .box:hover i {
+  background: #002963;
+}
+body .home::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  left: 50%;
+  bottom: -25rem;
+  transform: translateX(-50%);
+  border-top: 70vh solid #fff;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+  body header .fa-bars {
+    display: block;
+  }
+  body header nav {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: -100rem;
+    opacity: 0;
+    background: #fff;
+    border-radius: 0.2rem;
+    transition: 0.5s ease-in-out;
+  }
+  body header nav ul {
+    flex-flow: column;
+    padding-block: 2rem;
+    height: 100%;
+  }
+  body header nav ul li {
+    width: 100%;
+    margin-block: 1rem;
+    text-align: center;
+  }
+  body header nav ul li a {
+    font-size: 3rem;
+  }
+  body .home .content p {
+    padding: 1.5rem 2rem;
+  }
+  body .home::before {
+    display: none;
+  }
+}
+body header.full {
+  width: 100%;
+  top: 0;
+  border-radius: 0;
+}
+body header .rotating {
+  transform: rotate(270deg);
+}
+body header .show {
+  opacity: 1;
+  top: 5.7rem;
+}/*# sourceMappingURL=style.css.map */
