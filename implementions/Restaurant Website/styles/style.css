@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+html {
+  font-size: 62.55%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffc135;
+  overflow: hidden;
+}
+body .content .header {
+  width: 96%;
+  padding: 2rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background: url(/assets/header-bg.png);
+}
+body .content .header img {
+  width: 20rem;
+}
+body .content .header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .content .header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  font-size: 2.1rem;
+  text-transform: uppercase;
+  gap: 2rem;
+}
+body .content .header nav ul li a {
+  color: #42200b;
+  transition: 0.3s;
+}
+body .content .header nav ul li a:hover {
+  color: #df1c1c;
+}
+body .content .header nav .fa-solid {
+  cursor: pointer;
+  font-size: 2.3rem;
+  transition: 0.3s;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+  body .content .header {
+    width: 100%;
+    background: #42200b;
+  }
+  body .content .header nav {
+    justify-content: space-between;
+  }
+  body .content .header nav ul {
+    position: absolute;
+    flex-flow: column;
+    top: -30rem;
+    left: 0;
+    width: 100vw;
+    background: #42200b;
+    padding: 2rem;
+    transition: 0.3s ease-in-out;
+  }
+  body .content .header nav ul li a {
+    color: #ffffff;
+  }
+  body .content .header nav .fa-solid {
+    font-size: 3.5rem;
+    display: block;
+    color: #ffffff;
+  }
+}
+.rotate {
+  transform: rotate(180deg);
+}
+
+body .content .header nav ul.show {
+  top: 9rem;
+  left: 0;
+}/*# sourceMappingURL=style.css.map */

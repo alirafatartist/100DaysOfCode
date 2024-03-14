@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+$primary-color: #42200b;
+$secondary-color: #ffc135;
+$tertiary-color: #df1c1c;
+$text-dark: #212529;
+$white: #ffffff;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Bebas Neue", sans-serif;
+}
+html {
+  font-size: 62.55%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  background: $secondary-color;
+  overflow: hidden;
+  .content {
+    .header {
+      width: 96%;
+      padding: 2rem;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      background: url(/assets/header-bg.png);
+      img {
+        width: 20rem;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        ul {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          list-style: none;
+          font-size: 2.1rem;
+          text-transform: uppercase;
+          gap: 2rem;
+          li {
+            a {
+              color: $primary-color;
+              transition: 0.3s;
+              &:hover {
+                color: $tertiary-color;
+              }
+            }
+          }
+        }
+        .fa-solid {
+          cursor: pointer;
+          font-size: 2.3rem;
+          transition: 0.3s;
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// Responsive code
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+  body {
+    .content {
+      .header {
+        width: 100%;
+        background: $primary-color;
+        nav {
+          justify-content: space-between;
+          ul {
+            position: absolute;
+            flex-flow: column;
+            top: -30rem;
+            left: 0;
+            width: 100vw;
+            background: $primary-color;
+            padding: 2rem;
+            transition: 0.3s ease-in-out;
+            li {
+              a {
+                color: $white;
+              }
+            }
+          }
+          .fa-solid {
+            font-size: 3.5rem;
+            display: block;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// additional
+.rotate {
+  transform: rotate(180deg);
+}
+body .content .header nav ul.show {
+  top: 9rem;
+  left: 0;
+}
