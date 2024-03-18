@@ -6,6 +6,7 @@ const links = document.querySelector("nav ul");
 function changeimgsrc() {
   if (window.innerWidth <= 768) {
     logo.setAttribute("src", "./assets/logo-white.png");
+    links.style.color = "#ffffff";
   } else {
     logo.setAttribute("src", "./assets/logo-dark.png");
   }
