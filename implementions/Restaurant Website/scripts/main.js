@@ -16,7 +16,9 @@ changeimgsrc();
 window.addEventListener("resize", () => {
   changeimgsrc();
 });
-
+window.addEventListener("onload", () => {
+  changeimgsrc();
+});
 // toggle menubar
 menu.addEventListener("click", () => {
   menu.classList.toggle("fa-xmark");
