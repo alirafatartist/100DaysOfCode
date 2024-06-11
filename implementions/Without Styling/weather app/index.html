@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="content">
+        <input type="text" placeholder="enter the city">
+        <button onclick="get()">Search</button>
+        <div class="result">
+            <p>Weather in <span id="city">cairo</span></p>
+            <p id="date">Tue, Jun 11</p>
+            <p id="temp">25°C</p>
+            <div class="section-03">
+                <div class="sunrise"></div>
+                <div class="sunset"></div>
+                <div class="wind"></div>
+                <div class="pressure"></div>
+                <div class="humidity"></div>
+                <div class="clouds"></div>
+                <div class="help-text"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
