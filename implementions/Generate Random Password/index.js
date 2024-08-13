@@ -16,6 +16,7 @@ function genpass(length = 16) {
   copyBtn.classList.replace("green", "fa-clone");
   copyBtn.innerText = "";
   copyBtn.style.fontFamily = "";
+  localStorage.setItem("Password", input.value);
 }
 // copy password function
 async function copyPassword() {
@@ -26,3 +27,8 @@ async function copyPassword() {
   copyBtn.classList.replace("fa-check", "green");
   copyBtn.style.fontFamily = "Tahoma";
 }
+
+// setup local storage
+window.onload = function () {
+  input.value = localStorage.getItem("Password");
+};

@@ -1,6 +1,6 @@
 const group = document.querySelector(".group");
 
-for (let i = 0; i < 20; i++) {
+for (let i = 0; i < 100; i++) {
   const iconContainer = document.createElement("div");
   iconContainer.className = "iconContainer";
   iconContainer.id = "iconContainer";

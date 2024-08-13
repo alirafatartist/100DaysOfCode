@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+      }
+      .quiz-container {
+        width: 300px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .question {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      .answer {
+        display: block;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+      .score {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      #answerButtons{
+        display: flex;
+        flex-flow:column;
+      }
+    </style>
+  </head>
+  <body onload = "get()">
+    <div class="quiz-container" id="quizContainer">
+      <div class="question" id="question"></div>
+      <div id="answerButtons"></div>
+      <button id="nextButton" onclick="nextQuestion()" style="display: none">
+        Next
+      </button>
+      <div class="score" id="score" style="display: none"></div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

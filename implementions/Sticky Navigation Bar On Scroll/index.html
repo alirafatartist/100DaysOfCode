@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Logo</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Home</a></li>
+      </ul>
+    </header>
+    <section class="banner"></section>
+
+    <script>
+      window.onscroll = function () {
+        let x = window.scrollX;
+        let y = window.scrollY;
+        if (y >= 125) {
+          document.querySelector("header").style.background = "white";
+          document.querySelector("header").style.color = "black";
+          document.querySelector("header").style.padding = "15px 100px";
+        } else {
+          document.querySelector("header").style.background = "transparent";
+          document.querySelector("header").style.color = "white";
+          document.querySelector("header").style.padding = "40px 100px";
+        }
+      };
+    </script>
+  </body>
+</html>
