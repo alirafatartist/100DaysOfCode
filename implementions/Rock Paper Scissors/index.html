@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <p class="user-option">🤜</p>
+        <p class="cpu-option">🤛</p>
+      </div>
+      <div class="middle">
+        <p>Let's Play!!</p>
+      </div>
+      <div class="options">
+        <div id="rock" onclick="userSelection('rock')">
+          <p>✊</p>
+          <p>Rock</p>
+        </div>
+        <div id="paper" onclick="userSelection('paper')">
+          <p>🤚</p>
+          <p>Paper</p>
+        </div>
+        <div id="scissors" onclick="userSelection('scissors')">
+          <p>✌️</p>
+          <p>Scissors</p>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
