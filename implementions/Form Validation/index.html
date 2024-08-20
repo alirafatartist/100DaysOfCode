@@ -9,21 +9,44 @@
   </head>
   <body>
     <div class="container">
-      <div id="form" class="form">
+      <form
+        id="form"
+        class="form"
+        onsubmit="sendData(event)"
+        autocomplete="off"
+      >
         <h2>Register With Us</h2>
         <div class="form-control">
           <label for="username">Username</label>
-          <input type="text" id="username" placeholder="Enter username" />
-          <small>Username must be at least 3 characters</small>
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter username"
+            onblur="blurUsername()"
+            required
+          />
+          <small>Spaces not allowed in Username</small>
         </div>
         <div class="form-control">
           <label for="email">Email</label>
-          <input type="text" id="email" placeholder="Enter email" />
+          <input
+            type="text"
+            id="email"
+            placeholder="Enter email"
+            onblur="blurEmail()"
+            required
+          />
           <small>Email is not valid</small>
         </div>
         <div class="form-control">
           <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Enter password" />
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter password"
+            onblur="blurPassword()"
+            required
+          />
           <small>Password must be at least 6 characters</small>
         </div>
         <div class="form-control">
@@ -32,11 +55,13 @@
             type="password"
             id="password2"
             placeholder="Enter password again"
+            onblur="blurPassword2()"
+            required
           />
           <small>Password not matched</small>
         </div>
-        <button id="submit">Submit</button>
-      </div>
+        <button type="submit" id="submit">Submit</button>
+      </form>
     </div>
     <script src="main.js"></script>
   </body>

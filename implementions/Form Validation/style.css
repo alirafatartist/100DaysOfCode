@@ -10,6 +10,8 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -80,7 +82,7 @@ h2 {
   visibility: hidden;
 }
 
-.form-control.error small {
+.form-control small.error {
   visibility: visible;
 }
 
@@ -96,3 +98,14 @@ h2 {
   margin-top: 20px;
   width: 100%;
 }
+
+
+
+@media (max-width:400px) {
+  .container {
+    width: 340px;
+  }
+}
+/* .error{
+  color: var(--error-color);
+} */
